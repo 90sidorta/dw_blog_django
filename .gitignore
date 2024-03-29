@@ -5,3 +5,4 @@ db.sqlite3
 .env.production
 .env.test
 .vscode
+.pytest_cache/
