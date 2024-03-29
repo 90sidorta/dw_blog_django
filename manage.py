@@ -8,12 +8,16 @@ from dw_blog_django.settings.base import ENVIRONMENT
 
 def main():
     """Run administrative tasks."""
-    if ENVIRONMENT == 'DEVELOPMENT':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dw_blog_django.settings.development')
-    elif ENVIRONMENT == 'PRODUCTION':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dw_blog_django.settings.production')
+    if ENVIRONMENT == "DEVELOPMENT":
+        os.environ.setdefault(
+            "DJANGO_SETTINGS_MODULE", "dw_blog_django.settings.development"
+        )
+    elif ENVIRONMENT == "PRODUCTION":
+        os.environ.setdefault(
+            "DJANGO_SETTINGS_MODULE", "dw_blog_django.settings.production"
+        )
     else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dw_blog_django.settings.base')
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dw_blog_django.settings.base")
 
     try:
         from django.core.management import execute_from_command_line
@@ -26,5 +30,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
