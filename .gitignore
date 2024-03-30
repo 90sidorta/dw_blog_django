@@ -6,3 +6,5 @@ db.sqlite3
 .env.test
 .vscode
 .pytest_cache/
+htmlcov
+.coverage

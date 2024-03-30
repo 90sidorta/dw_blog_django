@@ -6,7 +6,7 @@ from django.db import models
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    episode_number = models.IntegerField(editable=False, unique=False)
+    episode_number = models.IntegerField(editable=True, unique=False)
     title = models.CharField(max_length=300)
     subtitle = models.CharField(max_length=500)
     slug = models.SlugField(max_length=100, unique=True)
@@ -28,7 +28,7 @@ class Post(models.Model):
         ),
     )
     wykop_link = models.URLField(blank=False, null=False)
-    podcast_links = models.URLField(blank=True, null=True)
+    podcast_link = models.URLField(blank=True, null=True)
     series = models.CharField(
         max_length=200,
         default="main",
@@ -41,9 +41,10 @@ class Post(models.Model):
             ("non_european_christianity", "Non-European Christianity"),
         ),
     )
+    notes = models.TextField(blank=True, null=True)
 
     class Meta:
-        ordering = ("-episode_number",)
+        ordering = ("-episode_number", "-created_at")
 
     def __str__(self):
         return self.title

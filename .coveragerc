@@ -1,0 +1,12 @@
+[run]
+branch = True
+omit =
+  tests/*,
+  __init__.py
+  htmlcov/*
+
+[report]
+omit =
+  tests/*,
+  __init__.py
+  htmlcov/*
