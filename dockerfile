@@ -1,5 +1,9 @@
-# The base image we want to inherit from
+# Base image
 FROM python:3.10-bullseye as development_build
+
+# Set environment variables
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN apt-get update && \
     apt-get upgrade -y && \

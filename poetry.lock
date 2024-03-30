@@ -176,6 +176,20 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-autoreload"
+version = "0.1.1"
+description = "Autoreload files in browser for Django development"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-autoreload-0.1.1.tar.gz", hash = "sha256:d6b4c877fbb6eb0c301aa7f995006935a2546d61e3054d1d40282c19f76dc38a"},
+]
+
+[package.dependencies]
+pyinotify = "*"
+websocket-server = "*"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.2.0"
 description = "Backport of PEP 654 (exception groups)"
@@ -389,6 +403,16 @@ files = [
 ]
 
 [[package]]
+name = "pyinotify"
+version = "0.9.6"
+description = "Linux filesystem events monitoring"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyinotify-0.9.6.tar.gz", hash = "sha256:9c998a5d7606ca835065cdabc013ae6c66eb9ea76a00a1e3bc6e0cfe2b4f71f4"},
+]
+
+[[package]]
 name = "pytest"
 version = "8.1.1"
 description = "pytest: simple powerful testing with Python"
@@ -552,7 +576,18 @@ files = [
     {file = "tzdata-2024.1.tar.gz", hash = "sha256:2674120f8d891909751c38abcdfd386ac0a5a1127954fbc332af6b5ceae07efd"},
 ]
 
+[[package]]
+name = "websocket-server"
+version = "0.6.4"
+description = "A simple fully working websocket-server in Python with no external dependencies"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "websocket_server-0.6.4-py3-none-any.whl", hash = "sha256:aca2d8f7569c82fe3e949cbae1f9d3f3035ae15f1d4048085431c94b7dfd35be"},
+    {file = "websocket_server-0.6.4.tar.gz", hash = "sha256:a8a02d575905e50f6af90bbbc37d23d7e1b027630897f0eeefed6a3fb3c22e07"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "e161e405050d8d150c7b1488f850cda20add4aa657f49c42a87abb4269931c73"
+content-hash = "4c5f4b050213ecc2e98efb6419291a88dae74de7cfe8be6104fda2680f83f9ee"
