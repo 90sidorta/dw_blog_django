@@ -1,3 +1,25 @@
-body {
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+
+.logo {
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+}
+
+.logo_image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.nav-item {
+    margin-right: 0.75rem;
+}
+
+.main-header {
+    font-family: 'Barlow', sans-serif;
 }
