@@ -9,7 +9,7 @@ Wpisy
 {% include "../base/navbar.html" %}
 {% include "./components/splash.html" %}
 
-<div class="container">
+<div class="container pt-5">
     <div class="row">
         <div class="col-12 col-lg-8">
             {% for post in posts %}
@@ -18,15 +18,18 @@ Wpisy
                     <div class="row">
                         <div class="col-8">
                             <div class="card-body p-0">
-                                <div class="pb-2 text-body">{{post.author}}</div>
-                                <h3 class="mb-1">{{post.title}}</h3>
-                                <h5 class="text-muted">{{post.subtitle}}</h5>
-                                <p>{{ post.content|truncatewords:20 }}</p>
-                                <div class="text-muted">{{post.created_at|date:"d-m-Y"}}</div>
+                                <div class="pb-2 text-body ">{{post.author}}</div>
+                                <h3 class="mb-1 text-body fw-bolg">{{post.title}},</h3>
+                                <h5 class="text-muted fs-6">{{post.subtitle}}</h5>
+                                <p class="d-none d-md-block">{{ post.content|truncatewords:20 }}</p>
+                                <div class="text-muted">Opublikowany {{post.created_at|date:"d-m-Y"}}</div>
                             </div>
-                            <div class="col-4"></div>
+                        </div>
+                        <div class="col-4">
+                            <img src="https://picsum.photos/id/237/205/115" class="img-fluid float-end">
                         </div>
                     </div>
+                </div>
             </a>
             {% endfor %}
         </div>
