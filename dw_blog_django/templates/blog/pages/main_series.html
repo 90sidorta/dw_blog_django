@@ -1,0 +1,12 @@
+{% extends "../../base/base.html" %}
+
+{% block title %}
+Główna seria
+{% endblock %}
+
+
+{% block template %}
+{% include "../../base/navbar.html" %}
+{% include "../components/post_list.html" with posts=main_posts%}
+
+{% endblock %}
