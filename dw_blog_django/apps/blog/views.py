@@ -10,6 +10,15 @@ class MainView(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(episode_number__in=[1, 2, 3]).order_by(
-            "-episode_number"
-        )[:3]
+        return queryset.filter(
+            episode_number__in=[
+                51,
+                66,
+                67,
+                75,
+                82,
+                83,
+                86,
+                91,
+            ]
+        ).order_by("-episode_number")[:10]
