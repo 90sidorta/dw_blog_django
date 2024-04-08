@@ -48,3 +48,16 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if self.pk and self.tags.count() > 5:
+            raise Exception("A post can have a maximum of 5 tags.")
+        self.title = self.title.strip()
+        self.subtitle = self.subtitle.strip()
+        self.wykop_link = self.wykop_link.strip()
+        if self.podcast_link:
+            self.podcast_link = self.podcast_link.strip()
+        if self.notes:
+            self.notes = self.notes.strip()
+
+        super().save(*args, **kwargs)

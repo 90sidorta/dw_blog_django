@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Custom apps
     "dw_blog_django.apps.blog",
+    "dw_blog_django.apps.tags",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
